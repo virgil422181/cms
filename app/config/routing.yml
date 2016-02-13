@@ -1,0 +1,6 @@
+custom_cms:
+    resource: "@CustomCMSBundle/Resources/config/routing.yml"
+    prefix:   /
+comur_image:
+    resource: "@ComurImageBundle/Resources/config/routing.yml"
+    prefix:   /
