@@ -1,6 +1,0 @@
-[submodule "ComurImageBundle"]
-	path = ComurImageBundle
-	url = https://github.com/comur/ComurImageBundle.git
-[submodule "src/ComurImageBundle"]
-	path = src/ComurImageBundle
-	url = https://github.com/comur/ComurImageBundle.git

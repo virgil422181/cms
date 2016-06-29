@@ -29,3 +29,6 @@ logout:
     path: /logout
     defaults: { _controller: CustomCMSBundle:Security:logout }
 
+login_facebok:
+    path: /loginfb
+    defaults: { _controller: CustomCMSBundle:Security:loginFacebook }

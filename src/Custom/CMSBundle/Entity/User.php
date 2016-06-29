@@ -37,7 +37,7 @@ class User implements AdvancedUserInterface
     private $password;
 
     /**
-     * @ORM\Column(name="roles", type="json_array")
+     * @ORM\Column(name="roles", type="json_array", nullable=true)
      */
     private $roles;
 

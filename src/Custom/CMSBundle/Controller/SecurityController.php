@@ -7,10 +7,10 @@
 
 namespace Custom\CMSBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class SecurityController extends Controller
+class SecurityController extends FacebookController
 {
 
     public function loginAction(Request $request)
@@ -24,7 +24,7 @@ class SecurityController extends Controller
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render(
-            'security/login.html.twig',
+            'CustomCMSBundle:security:login.html.twig',
             array(
                 // last username entered by the user
                 'last_username' => $lastUsername,
@@ -34,12 +34,18 @@ class SecurityController extends Controller
     }
     public function loginCheckAction()
     {
-        // this controller will not be executed,
-        // as the route is handled by the Security system
+        return new Response(true);
     }
 
     public function logoutAction ()
     {
         // nothing here .
+    }
+    public function loginFacebookAction ()
+    {
+        echo '<pre>';
+        print_r(get_class_methods($this->getFb()));
+        echo '</pre>';
+        die;
     }
 }
